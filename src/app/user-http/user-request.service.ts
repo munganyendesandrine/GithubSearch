@@ -8,7 +8,7 @@ export class UserRequestService {
     user:User;
 
   constructor(private http:HttpClient) { 
-    this.user=new User("","","",0,0,0,"")
+    this.user=new User("","","",0,0,0,"",new Date())
   }
 
   userRequest(userInput){
@@ -23,7 +23,7 @@ export class UserRequestService {
       following:number;
       public_repos:number;
       html_url:string;
-
+      completeDate:Date;
     }
     let promise =new Promise((resolve,reject)=>{
         this.http.get<ApiResponse>('https://api.github.com/users/' + userName + '?access_token=4ed40c469cf62375e4f19532aa5bad52c3d109d9').toPromise().then(response=>{
@@ -35,7 +35,7 @@ export class UserRequestService {
             this.user.following=response.following
             this.user.public_repos=response.public_repos
             this.user.html_url=response.html_url
-
+            this.user.completeDate=response.completeDate 
             resolve()
         },
         error=>{

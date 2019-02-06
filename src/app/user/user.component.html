@@ -10,17 +10,26 @@
     <div class="row">
             
         <blockquote class="text-center text-lg">
-                <ul><li id="{{i}}" appHighlight>
+          <ul>
+            <li id="{{i}}" appHighlight><br>
             <p ><strong>{{user.name}}</strong></p>
             <img src="{{user.avatar_url}}">
             <br><br>
             
-            <footer><cite><u> Location</u>:{{user.location}}<br><br>
+            <footer>
+              <cite><u> Location</u>:{{user.location}} <br><br>
                 <u>Followers</u>:{{user.followers}}<br><br>
                 <u>Following:</u>{{user.following}}<br><br>
                 <u>Repositories Number</u>:{{user.public_repos}}<br><br>
-                <a href="{{user.html_url}}" target="_blank">Link to GitHub</a></cite></footer></li></ul>
+                <a href="{{user.html_url}}" target="_blank">Link to GitHub</a><br><br>
+                
+                
+              </cite>
+            </footer>
+            </li>
+          </ul>
         </blockquote>
+       <p> Data requested on: {{user.completeDate|date|uppercase}} </p>
     </div>
     
 </div>

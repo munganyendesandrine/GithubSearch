@@ -16,7 +16,7 @@ export class UserComponent implements OnInit {
   user:User;
   userName=""
   constructor(private userService:UserRequestService){
-   this.user=new User("","","",0,0,0,"")
+   this.user=new User("","","",0,0,0,"",new Date())
   }
   submitUser(){
          this.userService.userRequest(this.userName)
@@ -24,7 +24,9 @@ export class UserComponent implements OnInit {
   ngOnInit() {
     
       this.userService.userRequest('munganyendesandrine')
+           
       this.user=this.userService.user
+     
   }
  
   }
