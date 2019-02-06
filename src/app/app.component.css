@@ -1,8 +1,10 @@
 .container{
-    background-color: aqua;
+    background-color:aquamarine
 }
 .app{
-    background-color: aqua;
-    margin-left: 250px;
-    margin-left: 250px;
+    /* background-color: aqua; */
+    /* margin-left: 50px;
+    margin-left: 50px;
+    padding: 50px; */
+    justify-content: center;
 }

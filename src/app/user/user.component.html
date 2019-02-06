@@ -2,7 +2,7 @@
 <h1>Fetched Data</h1>
 <div class="container">
     <div class="form-group">
-  
+        
         <label for="name"><u>Search Here</u>:</label>
         <input type="text" name="githubUser" placeholder="Type the Github Username" [(ngModel)]="userName">
         <button (click)="submitUser()">Search</button>
@@ -10,14 +10,16 @@
     <div class="row">
             
         <blockquote class="text-center text-lg">
-            <p><strong>{{user.name}}</strong></p>
+                <ul><li id="{{i}}" appHighlight>
+            <p ><strong>{{user.name}}</strong></p>
             <img src="{{user.avatar_url}}">
             <br><br>
+            
             <footer><cite><u> Location</u>:{{user.location}}<br><br>
                 <u>Followers</u>:{{user.followers}}<br><br>
                 <u>Following:</u>{{user.following}}<br><br>
                 <u>Repositories Number</u>:{{user.public_repos}}<br><br>
-                <a href="{{user.html_url}}" target="_blank">Link to GitHub</a></cite></footer>
+                <a href="{{user.html_url}}" target="_blank">Link to GitHub</a></cite></footer></li></ul>
         </blockquote>
     </div>
     
