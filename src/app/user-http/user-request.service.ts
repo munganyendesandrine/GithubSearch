@@ -26,7 +26,7 @@ export class UserRequestService {
       completeDate:Date;
     }
     let promise =new Promise((resolve,reject)=>{
-        this.http.get<ApiResponse>('https://api.github.com/users/' + userName + '?access_token=4ed40c469cf62375e4f19532aa5bad52c3d109d9').toPromise().then(response=>{
+        this.http.get<ApiResponse>('https://api.github.com/users/' + userName).toPromise().then(response=>{
             
             this.user.name=response.name
             this.user.avatar_url=response.avatar_url
