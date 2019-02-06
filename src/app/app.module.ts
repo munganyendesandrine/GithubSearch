@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { UserFormComponent } from './user-form/user-form.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { HighlightDirective } from './highlight.directive'
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    UserFormComponent
+    UserFormComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
