@@ -30,7 +30,9 @@
           </ul>
         </blockquote>
          
-        <!-- <app-user-details></app-user-details> -->
+       
     </div>
-    <p><u>Pipe</u>: Data requested on: {{user.completeDate|date|uppercase}} </p>
+   
+    <p><u>Pipe</u>: <u>Data requested on</u>: {{user.completeDate|date|date :"fullDate"|uppercase}} at Timezone: {{user.completeDate|date|date :"mediumTime"}} </p><br>
+   
 </div>

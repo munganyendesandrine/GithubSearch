@@ -1,14 +1,20 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import {User}from '../user-class/user'
+import{DateCountPipe} from '../date-count.pipe'
 
 @Injectable()
 export class UserRequestService {
 
     user:User;
-
+    // now = new Date();
+    // dateFormat = require('dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT")');
+    
+    
+    
   constructor(private http:HttpClient) { 
     this.user=new User("","","",0,0,0,"",new Date())
+    
   }
 
   userRequest(userInput){
@@ -23,7 +29,7 @@ export class UserRequestService {
       following:number;
       public_repos:number;
       html_url:string;
-      completeDate:Date;
+     
     }
     let promise =new Promise((resolve,reject)=>{
         this.http.get<ApiResponse>('https://api.github.com/users/' + userName).toPromise().then(response=>{
@@ -35,7 +41,7 @@ export class UserRequestService {
             this.user.following=response.following
             this.user.public_repos=response.public_repos
             this.user.html_url=response.html_url
-            this.user.completeDate=response.completeDate 
+          
             resolve()
         },
         error=>{

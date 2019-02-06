@@ -8,7 +8,6 @@ import { UserFormComponent } from './user-form/user-form.component';
 import {HttpClientModule} from '@angular/common/http';
 import { HighlightDirective } from './highlight.directive';
 import { DateCountPipe } from './date-count.pipe';
-import { UserDetailsComponent } from './user-details/user-details.component'
 import{RoutingModule} from './routing/routing.module';
 import { AboutComponent } from './about/about.component'
 import{RouterModule,Routes} from '@angular/router';
@@ -22,7 +21,6 @@ import { NotFoundComponent } from './not-found/not-found.component'
     UserFormComponent,
     HighlightDirective,
     DateCountPipe,
-    UserDetailsComponent,
     AboutComponent,
     NotFoundComponent
   ],
