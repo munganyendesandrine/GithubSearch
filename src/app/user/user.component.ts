@@ -20,6 +20,7 @@ export class UserComponent implements OnInit {
   }
   submitUser(){
          this.userService.userRequest(this.userName)
+         
 }
   ngOnInit() {
     

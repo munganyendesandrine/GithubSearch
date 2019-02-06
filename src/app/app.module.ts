@@ -6,14 +6,18 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import {HttpClientModule} from '@angular/common/http';
-import { HighlightDirective } from './highlight.directive'
+import { HighlightDirective } from './highlight.directive';
+import { DateCountPipe } from './date-count.pipe';
+import { UserDetailsComponent } from './user-details/user-details.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     UserFormComponent,
-    HighlightDirective
+    HighlightDirective,
+    DateCountPipe,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
