@@ -9,6 +9,11 @@ import {HttpClientModule} from '@angular/common/http';
 import { HighlightDirective } from './highlight.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { UserDetailsComponent } from './user-details/user-details.component'
+import{RoutingModule} from './routing/routing.module';
+import { AboutComponent } from './about/about.component'
+import{RouterModule,Routes} from '@angular/router';
+import { NotFoundComponent } from './not-found/not-found.component'
+
 
 @NgModule({
   declarations: [
@@ -17,13 +22,16 @@ import { UserDetailsComponent } from './user-details/user-details.component'
     UserFormComponent,
     HighlightDirective,
     DateCountPipe,
-    UserDetailsComponent
+    UserDetailsComponent,
+    AboutComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
